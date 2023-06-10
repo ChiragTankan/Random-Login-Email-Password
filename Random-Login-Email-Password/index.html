@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Data Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css"  />
+  </head>
+  <body class="bg-gray-200">
+    
+  <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+    </a>
+    <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+        </li>
+        <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li aria-labelledby="dropdownNavbarLink">
+                    <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dropdown<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                    <div id="doubleDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                          <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Overview</a>
+                          </li>
+                          <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">My downloads</a>
+                          </li>
+                          <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Billing</a>
+                          </li>
+                          <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Rewards</a>
+                          </li>
+                        </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                </div>
+            </div>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+    <section class="bg-blue-500 py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-white text-5xl font-bold mb-6">Random Data Generator</h1>
+        <p class="text-white text-xl mb-8">Generate random names, emails, and passwords with one click!</p>
+        <div class="flex">
+          <div class="wrapper">
+ <input type="radio" name="nationality" id="indian" class="mr-2"  >
+ <input type="radio"  name="nationality" id="foreign" class="mr-2" checked>
+   <label for="indian" class="option indian">
+     <div class="dot"></div>
+      <span>Indian</span>
+      </label>
+   <label for="foreign" class="option foreign">
+     <div class="dot"></div>
+      <span>Foreign</span>
+   </label>
+</div><br><br>
+        </div>
+        <button id="generateBtn" class="bg-white text-blue-500 px-4 py-2 rounded-full mt-8 hover:bg-blue-100 focus:outline-none">Generate</button>
+      </div>
+    </section>
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Generated Data</h2>
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <p class="text-gray-500 text-lg mb-2">Name:</p>
+          <p id="name" class="text-xl font-bold mb-6"></p>
+          <p class="text-gray-500 text-lg mb-2">Email:</p>
+          <p id="email" class="text-xl font-bold mb-6"></p>
+          <p class="text-gray-500 text-lg mb-2">Password:</p>
+          <p id="password" class="text-xl font-bold mb-6"></p>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  <body>
+<!-- HEro Section -->
+
+    <button class="refresh" onclick="window.location.reload() " title="Refresh">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon">
+            <path fill="#ffffff"
+                d="M440.65 12.57l4 82.77A247.16 247.16 0 0 0 255.83 8C134.73 8 33.91 94.92 12.29 209.82A12 12 0 0 0 24.09 224h49.05a12 12 0 0 0 11.67-9.26 175.91 175.91 0 0 1 317-56.94l-101.46-4.86a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12H500a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12h-47.37a12 12 0 0 0-11.98 12.57zM255.83 432a175.61 175.61 0 0 1-146-77.8l101.8 4.87a12 12 0 0 0 12.57-12v-47.4a12 12 0 0 0-12-12H12a12 12 0 0 0-12 12V500a12 12 0 0 0 12 12h47.35a12 12 0 0 0 12-12.6l-4.15-82.57A247.17 247.17 0 0 0 255.83 504c121.11 0 221.93-86.92 243.55-201.82a12 12 0 0 0-11.8-14.18h-49.05a12 12 0 0 0-11.67 9.26A175.86 175.86 0 0 1 255.83 432z" />
+        </svg>
+    </button>
+    <section class="hero" id="banner">
+
+        <div class="animation-container">
+            <h1 class="big-big">dude</h1>
+
+            <div class="box-with-text">
+                <p class="txt-inside-box">
+                    <span style=" opacity: 1;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quia, sint fuga totam ipsam
+                        magnam quae exercitationem, enim quos quaerat natus cupiditate alias nemo blanditiis facere,
+                        impedit delectus at maxime.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quia, sint fuga totam ipsam
+                    </span>
+                </p>
+            </div>
+
+            <div class="phone">
+                <div class="phone-inner-border">
+                    <div class="screen-big"></div>
+                    <div class="screen-l"></div>
+                    <div class="screen-l"></div>
+
+                    <div class="screen-s"></div>
+                    <div class="screen-s s2"></div>
+                    <div class="screen-s s3"></div>
+                    <div class="screen-s s4"></div>
+                    <div class="screen-s s5"></div>
+
+                    <div class="screen-bottom"></div>
+                </div>
+            </div>
+            <div class="shapes">
+                <!-- stilll thinking how to about it
+          Not yet decide -->
+            </div>
+            <div class="un-namd">
+
+            </div>
+
+            <div class="main-text">
+                <h1>Paint your <br />
+                    UI to life</h1>
+                <p class="txt-small">With Dart VM's</p>
+                <p class="txt-small">instant hot reload</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="info">
+        <p class="txt">Dart is a client-optimized language<br /> for fast apps on any platform
+            <br />
+            <a href="http://" class="watch-icon-link">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon">
+
+                    <path
+                        d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+                </svg>
+                <span>Watch Video</span>
+
+            </a>
+
+        </p>
+
+
+        <p class="drk" style="font-weight:bold">Made by <span class="big-text">Chirag Tankan</span></p>
+    </div>
+
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</html>
+       
